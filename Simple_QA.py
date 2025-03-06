@@ -54,7 +54,7 @@ class QA_Bot:
     def query(self, question):
 
         if(self.__status==1):
-            return self.__fitted_Network.predict( self.__class_vectorizer.transform([question]) )[0]
+            return self.__fitted_Network.predict( self.__class_vectorizer.transform([question]))[0]
         else: 
             return warnings.warn("No model has been trained yet. Import a model or use train_new_bot() to make one.", QA_Bot_Warning)
 
